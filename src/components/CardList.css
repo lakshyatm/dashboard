@@ -1,0 +1,14 @@
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    width: calc(33.33% - 60px); /* Adjust the width as needed, considering margin */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    /* Add any additional styling for the card */
+  }
+
+  

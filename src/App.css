@@ -28,6 +28,74 @@
   color: #61dafb;
 }
 
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.filter-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+
+.filter-option {
+  margin-bottom: 10px;
+}
+
+.filter-buttons {
+  margin-top: 10px;
+}
+
+.filter-buttons button {
+  margin-right: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.search-bar,
+.filter-dropdown {
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+.filter-button {
+  background-color: #aaa; /* Green color, you can customize */
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.filter-icon {
+  width: 20px; /* Adjust the width of the icon */
+  height: 14px; /* Adjust the height of the icon */
+  margin-right: 5px; /* Adjust margin as needed */
+}
+.filter-button:hover {
+  background-color: #aaa; /* Darker shade on hover, you can customize */
+}
+
+.tabs button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background-color: #4caf50; /* Green color (you can customize) */
+  color: white;
+  border: 1px solid #4caf50;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

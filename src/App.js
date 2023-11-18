@@ -1,25 +1,57 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Tabs from './components/Tabs';
 import './App.css';
+import SearchBar from './components/SearchBar';
+import CardList from './components/CardList';
+import FilterBox from './components/FilterBox';
 
-function App() {
+const App = () => {
+  const [activeTab, setActiveTab] = useState('Your');
+  const [filter, setFilter] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [showFilterBox, setShowFilterBox] = useState(false);
+  const [selectedFilterOptions, setSelectedFilterOptions] = useState([]);
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
+
+  const handleSearch = (searchTerm) => {
+    setSearchTerm(searchTerm);
+  };
+  const handleFilterButtonClick = () => {
+    setShowFilterBox(!showFilterBox);
+  };
+
+  const handleFilterBoxApply = () => {
+    setFilter(selectedFilterOptions.join(', '));
+    setShowFilterBox(false);
+  };
+
+  const handleFilterBoxCancel = () => {
+    setShowFilterBox(false);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Tabs activeTab={activeTab} onChange={handleTabChange} />
+      <div className="container">
+        <SearchBar onSearch={handleSearch} className="search-bar" />
+        <button onClick={handleFilterButtonClick} className="search-button">
+          Filter
+        </button>
+        {showFilterBox && (
+          <FilterBox
+            options={['burner', 'subscription']} // Replace with your actual options
+            selectedOptions={selectedFilterOptions}
+            onChange={setSelectedFilterOptions}
+            onApply={handleFilterBoxApply}
+            onCancel={handleFilterBoxCancel}
+          />
+        )}
+      </div>
+      <CardList filter={filter} searchTerm={searchTerm} />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,26 @@
+/* Add this to your CSS file */
+.tabs {
+    display: flex;
+    gap: 20px; /* Adjust the space between buttons */
+  }
+  
+  .tab-button {
+    padding: 10px 15px;
+    background-color: #007bff; /* Set your desired background color */
+    color: #fff; /* Set your desired text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .tab-button:hover {
+    background-color: #0056b3; /* Set a darker shade for hover effect */
+  }
+  
+  .tab-button.active {
+    background-color: #0056b3; /* Set a darker shade for the active tab */
+  }
+  

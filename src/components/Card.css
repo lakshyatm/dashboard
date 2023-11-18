@@ -1,0 +1,64 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+  }
+  .highlight {
+    background-color: yellow; /* Set your desired highlight color */
+    font-weight: bold;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .limit-bar {
+    width: 100%; /* Set the width of the bar */
+    height: 10px; /* Set the height of the bar */
+    margin: 10px 0; /* Adjust margin as needed */
+    border-radius: 5px; /* Optional: Add rounded corners */
+
+    /* Adjust colors as needed */
+    background-color: #eee;
+    overflow: hidden;
+  }
+
+  .limit-progress {
+    height: 100%;
+    background-color: #4caf50; /* Green color for the progress */
+  }
+  .card-header {
+    color: #fff;
+    padding: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-weight: bold;
+  }
+  .card-details-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .card-detail {
+    text-align: center;
+  }
+  .detail-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .card-body {
+    padding: 8px;
+
+      }
+  
+  .burner-card {
+    border: 2px solid #aaa;
+  }
+  
+  .subscription-card {
+    border: 2px solid #aaa;
+  }
+  
